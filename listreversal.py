@@ -1,17 +1,20 @@
-n = int(input("Enter the number of items in List: "))
-s = []
 
-for i in range(n):
-   lst = input("Enter list item value: ")
-   s.append(lst)
 
-print("The list is ", s)
-
-i = 0
-while i < len(s)/2:
-   t = s[len(s)-1-i]
-   s[len(s)-1-i] = s[i]
-   s[i] = t
-   i += 1
-   
-print("The reversed list is ", s)
+def reverse_list(NumList, num):
+    j = Number - 1
+    i = 0
+    while(i < j):
+        temp = NumList[i]
+        NumList[i] = NumList[j]
+        NumList[j] = temp
+        i = i + 1
+        j = j - 1
+    
+NumList = []
+N = int(input("Enter Total Number of List Elements: "))
+for i in range(1, N + 1):
+    value = int(input("Enter the Value of %d Element : " %i))
+    NumList.append(value)
+    
+reverse_list(NumList, N)
+print("\nThe Result of a Reverse List =  ", NumList)
